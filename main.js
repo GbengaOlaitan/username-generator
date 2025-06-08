@@ -5,6 +5,7 @@ const userName = document.getElementById("user-name");
 const generateButton = document.getElementById("generateUserName");
 const emptyForm = document.querySelector(".js-empty-form");
 const btnCopy = document.querySelector(".js-btn-copy");
+const userNameBtn = document.querySelector(".js-username-btn");
 let userNameGenerated;
 let isUserNameAccepted = false;
 console.log(isUserNameAccepted);
@@ -43,44 +44,8 @@ generateButton.addEventListener("click", () => {
     userName.value = userNameGenerated;
 
     if (userName.value !== "@") {
-      const userNameBtn = document.querySelector(".js-username-btn");
       userNameBtn.classList.remove("hidden");
       generateButton.setAttribute("disabled", "disabled");
-
-      //Accept Button
-      const acceptBtn = document.getElementById("accept-btn");
-
-      acceptBtn.addEventListener("click", () => {
-        userNameBtn.innerHTML = `          <div class="success-message js-success-message">
-            <img src="./icons/success-green-check-mark-icon.svg" alt="success-icon" width="30px">
-            <p>Username Accepted</p>
-          </div>`;
-        setTimeout(() => {
-          const successMessage = document.querySelector(".js-success-message");
-          successMessage.classList.add("hidden");
-        }, 1000);
-
-        isUserNameAccepted = true;
- //Copy
-        if (isUserNameAccepted) {
-        btnCopy.addEventListener("click", () => {
-          userName.select();
-          document.execCommand("copy");
-          alert(`username ${userNameGenerated} copied`);
-        });
-      }
-      });
-
-  
-
-      //Decline Button
-      const declineBtn = document.getElementById("decline-btn");
-
-      declineBtn.addEventListener("click", () => {
-        userNameBtn.classList.add("hidden");
-        userName.value = "";
-        generateButton.removeAttribute("disabled");
-      });
     }
   }
   if (firstName.value == "" && lastName.value == "") {
@@ -89,4 +54,39 @@ generateButton.addEventListener("click", () => {
       emptyForm.classList.add("hidden");
     }, 2000);
   }
+});
+
+//Accept Button
+const acceptBtn = document.getElementById("accept-btn");
+
+acceptBtn.addEventListener("click", () => {
+  userNameBtn.innerHTML = `          <div class="success-message js-success-message">
+            <img src="./icons/success-green-check-mark-icon.svg" alt="success-icon" width="30px">
+            <p>Username Accepted</p>
+          </div>`;
+  setTimeout(() => {
+    const successMessage = document.querySelector(".js-success-message");
+    successMessage.classList.add("hidden");
+  }, 1000);
+
+  isUserNameAccepted = true;
+  //Copy Feature
+    if (isUserNameAccepted) {
+    btnCopy.addEventListener("click", () => {
+      userName.select();
+      document.execCommand("copy");
+      alert(`username ${userNameGenerated} copied`);
+    });
+  }
+
+});
+
+
+//Decline Button
+const declineBtn = document.getElementById("decline-btn");
+
+declineBtn.addEventListener("click", () => {
+  userNameBtn.classList.add("hidden");
+  userName.value = "";
+  generateButton.removeAttribute("disabled");
 });
