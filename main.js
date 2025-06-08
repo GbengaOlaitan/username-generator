@@ -45,7 +45,7 @@ generateButton.addEventListener("click", () => {
 
     if (userName.value !== "@") {
       userNameBtn.classList.remove("hidden");
-      // generateButton.setAttribute("disabled", "disabled");
+      generateButton.setAttribute("disabled", "disabled");
       generateButton.innerHTML = `Re-Generate Username`
     }
   }
@@ -66,7 +66,10 @@ acceptBtn.addEventListener("click", () => {
             <img src="./icons/success-green-check-mark-icon.svg" alt="success-icon" width="30px">
             <p>Username Accepted</p>
           </div>`;
-          userNameBtn.classList.add('hidden')
+          userNameBtn.classList.add('hidden');
+          generateButton.removeAttribute('disabled')
+          firstName.value = '';
+          lastName.value = '';
   setTimeout(() => {
     // generateButton.classList.add("hidden");
     generateButton.innerHTML= `Re-Generate Username`
