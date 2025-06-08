@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Username Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <div class="js-empty-form fill-form hidden">
+          <p>Please Fill Form</p>
+        </div>
+        <label for="first-name">
+          First-Name
+          <input type="text" id="first-name" />
+        </label>
+        <label for="last-name">
+          Last-Name
+          <input type="text" id="last-name" />
+        </label>
+        <label class="username-container">
+          <input type="text" placeholder="@username" id="user-name" />
+          <button class="btn btn-copy js-btn-copy">
+            <img src="./icons/copy-svgrepo-com.svg" alt="copy icon" width="30px">
+          </button>
+        </label>
+        <div class="js-username-btn hidden btn-container">
+          <button id="accept-btn" class="btn btn-generate">Accept</button>
+          <button id="decline-btn" class="btn btn-generate">Decline</button>
+        </div>
+        <button id="generateUserName" class="btn-generate btn">Generate userName</button>
+      </div>
+    </div>
+  </body>
+</html>
