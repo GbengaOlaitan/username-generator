@@ -17,7 +17,7 @@
   background-color: #2F3C7E;
   gap: 1rem;
   padding: 3rem;
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 10px 10px 15px rgb(97, 96, 96);
   border-radius: 0.5rem;
   position: relative;
   
@@ -103,13 +103,15 @@ input {
 }
 
 @media screen and (max-width: 600px){
-  .container {
-    background-color: green;
-  }
 
 .btn-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.hidden {
+  display: none;
+}
+
 }
