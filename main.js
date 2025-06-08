@@ -45,28 +45,31 @@ generateButton.addEventListener("click", () => {
 
     if (userName.value !== "@") {
       userNameBtn.classList.remove("hidden");
-      generateButton.setAttribute("disabled", "disabled");
+      // generateButton.setAttribute("disabled", "disabled");
+      generateButton.innerHTML = `Re-Generate Username`
     }
   }
   if (firstName.value == "" && lastName.value == "") {
     emptyForm.classList.remove("hidden");
     setTimeout(() => {
       emptyForm.classList.add("hidden");
-    }, 2000);
+    }, 4000);
   }
 });
 
 //Accept Button
 const acceptBtn = document.getElementById("accept-btn");
+const successMessage = document.querySelector(".js-success-message");
 
 acceptBtn.addEventListener("click", () => {
-  userNameBtn.innerHTML = `          <div class="success-message js-success-message">
+  generateButton.innerHTML = `          <div class="success-message js-success-message">
             <img src="./icons/success-green-check-mark-icon.svg" alt="success-icon" width="30px">
             <p>Username Accepted</p>
           </div>`;
+          userNameBtn.classList.add('hidden')
   setTimeout(() => {
-    const successMessage = document.querySelector(".js-success-message");
-    successMessage.classList.add("hidden");
+    // generateButton.classList.add("hidden");
+    generateButton.innerHTML= `Re-Generate Username`
   }, 1000);
 
   isUserNameAccepted = true;
