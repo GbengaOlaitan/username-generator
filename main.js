@@ -46,7 +46,6 @@ generateButton.addEventListener("click", () => {
       const userNameBtn = document.querySelector(".js-username-btn");
       userNameBtn.classList.remove("hidden");
       generateButton.setAttribute("disabled", "disabled");
-      //Copy Paste function
 
       //Accept Button
       const acceptBtn = document.getElementById("accept-btn");
@@ -62,8 +61,8 @@ generateButton.addEventListener("click", () => {
         }, 1000);
 
         isUserNameAccepted = true;
-
-            if (isUserNameAccepted) {
+ //Copy
+        if (isUserNameAccepted) {
         btnCopy.addEventListener("click", () => {
           userName.select();
           document.execCommand("copy");
