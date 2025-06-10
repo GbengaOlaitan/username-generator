@@ -60,6 +60,7 @@ acceptBtn.addEventListener("click", () => {
             <p>Username Accepted</p>
           </div>`;
           userNameBtn.classList.add('hidden');
+          btnCopy.classList.remove('hidden')
           generateButton.removeAttribute('disabled')
           firstName.value = '';
           lastName.value = '';
