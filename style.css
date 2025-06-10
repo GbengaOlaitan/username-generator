@@ -42,16 +42,17 @@ input {
   color: #ffff;
   font-weight: bold;
   background-color: #2f3c7e;
-  border: 1px solid white
 }
 
 .username-container {
   display: flex;
   flex-direction: row;
+  border: 1px solid white;
+  border-radius: 0.3rem;
 }
 
 .btn-copy {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   border-radius: 0 0.3rem 0.3rem 0;
 }
