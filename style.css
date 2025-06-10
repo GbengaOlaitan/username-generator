@@ -41,6 +41,8 @@ input {
   border-radius: 0.3rem 0 0 0.3rem;
   color: #ffff;
   font-weight: bold;
+  background-color: #2f3c7e;
+  border: 1px solid white
 }
 
 .username-container {
