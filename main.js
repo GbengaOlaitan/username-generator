@@ -28,6 +28,7 @@ function generateRandomNameNumber(nameParams) {
 
 generateButton.addEventListener("click", () => {
   if (firstName.value !== "" && lastName.value !== "") {
+    generateButton.innerHTML = 'Generate UserName'
     const firstNameElement = firstName.value.toLowerCase().trim();
     const lastNameElement = lastName.value.toLowerCase().trim();
     const generatedfirstName = generateRandomNameNumber(firstNameElement);
@@ -35,11 +36,12 @@ generateButton.addEventListener("click", () => {
     const userNameArr = [...generatedfirstName, ...generatedLastName];
     userNameGenerated = `@${userNameArr.join("")}`;
     userName.value = userNameGenerated;
+    btnCopy.classList.add('hidden')
 
     if (userName.value !== "@") {
       userNameBtn.classList.remove("hidden");
       generateButton.setAttribute("disabled", "disabled");
-      generateButton.innerHTML = `Re-Generate Username`
+      // generateButton.innerHTML = `Re-Generate Username`
     }
   }
   if (firstName.value == "" && lastName.value == "") {
