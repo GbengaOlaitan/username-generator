@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,21 +8,20 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #FBEAEB;
+  background-color: #fbeaeb;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
-  background-color: #2F3C7E;
+  background-color: #2f3c7e;
   gap: 1rem;
   padding: 3rem;
   box-shadow: 10px 10px 15px rgb(97, 96, 96);
   border-radius: 0.5rem;
   position: relative;
-  
 }
-label{
+label {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -32,7 +31,7 @@ label{
 }
 
 input {
-  padding: 0.7rem ;
+  padding: 0.7rem;
   border-radius: 0.3rem;
   border: none;
 }
@@ -42,8 +41,6 @@ input {
   border-radius: 0.3rem 0 0 0.3rem;
   color: white;
 }
-
-
 
 .username-container {
   display: flex;
@@ -64,12 +61,12 @@ input {
   color: #ffff;
 }
 
-.btn:hover{
+.btn:hover {
   cursor: pointer;
 }
 
 /* Button appeared when username is generated */
-#decline-btn{
+#decline-btn {
   background-color: rgb(197, 7, 7);
 }
 
@@ -79,7 +76,7 @@ input {
 
 .success-message {
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
   color: white;
@@ -89,14 +86,14 @@ input {
 
 .fill-form {
   background-color: red;
-  color:white;
+  color: white;
   text-align: center;
   height: 2rem;
   position: absolute;
-  top:0;
+  top: 0;
   /* This is not the best solution come back to solve this */
 
-  width:75%
+  width: 75%;
 
   /* This is not the best solution come back to solve this */
 }
@@ -105,16 +102,22 @@ input {
   display: none;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  .hidden {
+    display: none;
+  }
 
-.hidden {
-  display: none;
-}
+  .main-container {
+    margin: 0 1.5rem;
+  }
 
+  .btn-generate {
+    font-size: 0.9rem;
+  }
 }
